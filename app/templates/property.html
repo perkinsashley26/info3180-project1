@@ -1,0 +1,64 @@
+{% extends 'base.html' %}{% block main %}
+
+<h1 class="newproheader">Add New Property</h1>
+
+<form class="form" method="POST" action="{{ url_for('property') }}" enctype="multipart/form-data">
+    
+    {{ form.csrf_token }}
+
+    <div class="property-form">
+        {{ form.title.label(class="newproheader") }}
+        <br>
+        {{ form.title(required='required') }}
+    </div>
+
+    <div class="property-form area">
+        {{ form.description.label(class="newproheader") }}
+        <br>
+        {{ form.description(required='required') }}
+    </div>
+
+    <div class="property-form double">
+        <div>
+            {{ form.num_bedrooms.label(class="newproheader") }}
+            <br>
+            {{ form.num_bedrooms(required='required') }}
+        </div>
+
+        <div>
+            {{ form.num_bathrooms.label(class="newproheader") }}
+            <br>
+            {{ form.num_bathrooms(required='required') }}
+        </div>
+    </div>
+
+    <div class="property-form double">
+        <div>
+            {{ form.price.label(class="newproheader") }}
+            <br>
+            {{ form.price(required='required') }}
+        </div>
+
+        <div>
+            {{ form.propertytype.label(class="newproheader") }}
+            <br>
+            {{ form.propertytype(required='required') }}
+        </div>
+    </div>
+
+    <div class="property-form">
+        {{ form.location.label(class="newproheader") }}
+        <br>
+        {{ form.location(required='required') }}
+    </div>
+
+    <div class="property-form">
+        {{ form.photo.label(class="newproheader") }}
+        <br>
+        {{ form.photo(class="photo-card") }}
+    </div>
+
+    <button type="submit" class="btn add">Add Property</button>
+</form>
+
+{% endblock %}

@@ -1,3 +1,105 @@
 body {
-    padding-top: 50px;
+    padding-top: 100px;
 }
+h1 {
+    font-weight: bold;
+}
+
+.form {
+    background-color: white;
+    padding: 50px;
+    border-radius: 10px;
+    width: 700px;
+    margin-top: 25px;
+}
+.newproheader {
+    font-weight: bold;
+}
+.property-form {
+    margin-bottom: 15px;
+}
+
+.double {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+  }
+.formfield {
+    padding: 8px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.add {
+    background-color: #59bcf5;
+    color: white;
+    
+}
+
+.jumbotron {
+    background-color: whitesmoke;
+}
+
+.bg-primary {
+    background-color: #14B7A6 !important;
+}
+
+.prop-list {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 35px;
+}
+
+.overview-card {
+    background-color: #FFFFFF;
+    padding: 0px;
+    width: 350px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.view-btn {
+    width: 350px;
+    height: 45px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #14B7A6;
+    color: white;
+}
+
+.main {
+    object-fit: cover;
+    width: 350px;
+    height: 228px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.card-body {
+    padding: 15px;
+    height: 140px;
+}
+
+.location {
+    color: grey;
+}
+
+

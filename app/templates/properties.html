@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block main %}
+
+<h1 class="mainheader">Properties</h1>
+{% include 'flashmessages.html' %}
+<div class="propertylist">
+    {% for property in properties %}    
+    <div class="photo-card">
+      <img
+        class="img-card"
+        src="{{ url_for('get_image', filename=property.photo) }}"
+        alt="Property Photo"/>
+    </div>
+    <div class="propertyinfo">
+      <h5 class="ptitle">{{ property.title }}</h5>
+      <p class="plocation "><i class="fa fa-map-marker" aria-hidden="true"></i> 
+        {{ property.location }}</p>
+      <div class="price-bubble">${{ property.price }}</div>
+    </div>
+    <a href="{{url_for('propertyid', propertyid=property.id)}}"
+      ><button>View Property</button></a
+    >
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
