@@ -54,7 +54,11 @@ def property():
     
 @app.route('/properties')
 def properties():
+    print('HELLO')
     items = PropertyList.query.all()
+    print (items)
+    print (items[0].location)
+    print ('bloo')
     return render_template('properties.html', items=items)
 
 @app.route('/property/<propertyid>')
